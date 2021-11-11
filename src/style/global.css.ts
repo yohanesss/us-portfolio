@@ -15,10 +15,10 @@ interface IThemeColor {
   text?: string;
 }
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle<{ theme: IThemeColor }>`
   body {
-    background: ${({ theme }: any) => theme.body};
-    color: ${({ theme }: any) => theme.text};
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
     transition: background 0.2s ease-in, color 0.2s ease-in;
 
     header {
