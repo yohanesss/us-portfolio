@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 export enum ThemeColor {
-  light,
-  dark,
+  light = "light",
+  dark = "dark",
 }
 
 interface IThemeColorPicker {
