@@ -18,26 +18,32 @@ interface IThemeColorPicker {
   [ThemeColor.dark]: IThemeColor;
 }
 
-interface IThemeColor {
-  body?: string;
-  text?: string;
+export interface IThemeColor {
+  backgroundColor?: string;
+  textcolor?: string;
+  navBackgroundColor?: string;
+  navTextColor?: string;
 }
 
 export const colorThemes: IThemeColorPicker = {
   [ThemeColor.light]: {
-    body: "#f1f1f1",
-    text: "#121620",
+    backgroundColor: "#f1f1f1",
+    textcolor: "#121620",
+    navBackgroundColor: "red",
+    navTextColor: "white",
   },
   [ThemeColor.dark]: {
-    body: "#121620",
-    text: "#f1f1f1",
+    backgroundColor: "#121620",
+    textcolor: "#f1f1f1",
+    navBackgroundColor: "white",
+    navTextColor: "red",
   },
 };
 
 export const GlobalStyles = createGlobalStyle<{ theme: IThemeColor }>`
   body {
-    background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
+    background: ${({ theme }) => theme.backgroundColor};
+    color: ${({ theme }) => theme.textcolor};
     transition: background 0.2s ease-in, color 0.2s ease-in;
 
     header {
