@@ -29,14 +29,14 @@ export const colorThemes: IThemeColorPicker = {
   [ThemeColor.light]: {
     backgroundColor: "#f1f1f1",
     textcolor: "#121620",
-    navBackgroundColor: "red",
+    navBackgroundColor: "dimgrey",
     navTextColor: "white",
   },
   [ThemeColor.dark]: {
     backgroundColor: "#121620",
     textcolor: "#f1f1f1",
     navBackgroundColor: "white",
-    navTextColor: "red",
+    navTextColor: "dimgrey",
   },
 };
 

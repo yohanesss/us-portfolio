@@ -1,15 +1,9 @@
-import { useEffect, useState, useContext } from "react";
 import { ThemeProvider } from "styled-components";
-import {
-  GlobalStyles,
-  colorThemes,
-  ThemeColor,
-  MainContainer,
-} from "./style/global.css";
+import { GlobalStyles, colorThemes, ThemeColor } from "./style/global.css";
 
 import { useToggleDarkMode } from "./common/hooks/";
 import { ToggleThemeCtx } from "./common/context/";
-import { MainLayout } from "./features/layout/MainLayout";
+import { AppRoutes } from "./routes";
 
 function App() {
   const [theme, toggleTheme, isDarkTheme] = useToggleDarkMode();
@@ -25,69 +19,7 @@ function App() {
       >
         <>
           <GlobalStyles />
-          <MainLayout>
-            <MainContainer>
-              <header className="App-header">
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-              </header>
-            </MainContainer>
-          </MainLayout>
+          <AppRoutes />
         </>
       </ThemeProvider>
     </ToggleThemeCtx.Provider>
